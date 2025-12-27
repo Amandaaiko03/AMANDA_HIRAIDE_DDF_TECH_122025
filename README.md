@@ -23,6 +23,21 @@ Para atender ao desafio de construir uma Plataforma de Dados robusta, selecionei
 
 ---
 
+## 📅 Item 2 - Planejamento e Gestão
+
+**Metodologia:** O gerenciamento do projeto foi realizado utilizando a metodologia ágil **Kanban** através do GitHub Projects, permitindo visualização clara do fluxo de trabalho e entregas incrementais.
+
+**Status do Projeto:**
+O quadro abaixo reflete o estado atual das entregas, desde a ingestão dos dados até a construção do Data App.
+
+![Kanban do Projeto](assets/kanban_project.png)
+
+**Backlog de Melhorias Futuras:**
+* Implementação de testes unitários automatizados.
+* Pipeline de CI/CD para deploy automático do Streamlit.
+
+---
+
 ## ⚙️ Item 2.1 - Integração e Ingestão de Dados
 
 Realizei a ingestão dos dados na plataforma Dadosfera, focando na tabela fato principal (`olist_order_items`) e nas dimensões satélites.
