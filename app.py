@@ -20,7 +20,7 @@ st.markdown("Este Data App demonstra a aplicação de **Engenharia de Dados** e 
 def load_data():
     # 1. Carregar Reviews
     df_reviews = None
-    paths_reviews = ["data/REVIEWS_ENRICHED_GENAI.csv", "REVIEWS_ENRICHED_GENAI.csv"]
+    paths_reviews = ["data/gold/GOLD_SALES_CDM.csv", "GOLD_SALES_ORDER_CDM.csv"]
     
     for path in paths_reviews:
         try:
@@ -121,3 +121,4 @@ with tab3:
     * **Visualização:** Plotly Express
     * **Origem:** Repositório GitHub (CI/CD)
     """)
+
