@@ -265,5 +265,6 @@ Ao utilizar a arquitetura da Dadosfera, o *compute* utilizado para a ingestão e
 Isso garante **escalabilidade elástica**: se o volume de dados aumentasse de 100 mil para 100 milhões de linhas, o pipeline continuaria performático sem necessidade de refatoração de código, apenas ajuste de *Warehouse Size*.
 
 **Evidência do Pipeline:**
-![Evidência Pipeline](assets/pipeline_status.png)
+![Evidência Pipeline](assets/pipeline_costomers.png)
+
 
