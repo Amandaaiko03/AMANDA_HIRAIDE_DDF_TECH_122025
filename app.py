@@ -18,9 +18,10 @@ st.markdown("Este Data App demonstra a aplicação de **Engenharia de Dados** e 
 # Função de Carga de Dados (Cache)
 @st.cache_data
 def load_data():
-    # 1. Carregar Reviews
+    # 1. Carregar Reviews (CORRIGIDO PARA O ARQUIVO CERTO)
     df_reviews = None
-    paths_reviews = ["data/gold/GOLD_SALES_CDM.csv", "GOLD_SALES_ORDER_CDM.csv"]
+    # Tenta ler na raiz ou dentro da pasta data
+    paths_reviews = ["REVIEWS_ENRICHED_GENAI.csv", "REVIEWS_ENRICHED_GENAI.csv"]
     
     for path in paths_reviews:
         try:
@@ -70,6 +71,7 @@ with tab1:
         col1, col2, col3 = st.columns(3)
         total_reviews = len(df_reviews)
         
+        # Verifica se a coluna 'sentiment' existe (mesmo com dados fake ou reais)
         if 'sentiment' in df_reviews.columns:
             # Métricas
             positive_pct = len(df_reviews[df_reviews['sentiment']=='Positivo']) / total_reviews * 100
@@ -97,7 +99,7 @@ with tab1:
                 filtrado = df_reviews[df_reviews['review_comment_message'].str.contains(texto, case=False, na=False)]
                 st.dataframe(filtrado[['category', 'sentiment', 'review_comment_message']].head(10))
         else:
-            st.error("A coluna 'sentiment' não foi encontrada no CSV.")
+            st.error("A coluna 'sentiment' não foi encontrada no CSV carregado.")
 
 # Aba 2: Vendas (Gold)
 with tab2:
@@ -121,4 +123,5 @@ with tab3:
     * **Visualização:** Plotly Express
     * **Origem:** Repositório GitHub (CI/CD)
     """)
+
 
