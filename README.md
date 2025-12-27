@@ -38,7 +38,7 @@ Para garantir a integridade do schema (*Schema-on-Write*), identifiquei que a in
 Isso eliminou a necessidade de *casting* complexo e acelerou a disponibilidade dos dados na camada Silver.
 
 **Evidência do Pipeline:**
-![Pipeline de Ingestão](assets/image_pipeline_sucesso.png)
+![Pipeline de Ingestão](assets/Pipeline_status.png)
 
 ---
 
